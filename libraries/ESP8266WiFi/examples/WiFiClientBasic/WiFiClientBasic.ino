@@ -57,7 +57,8 @@ void loop() {
 
     //read back one line from server
     String line = client.readStringUntil('\r');
-    client.println(line);
+    // and print it to Serial
+    Serial.println(line);
 
     Serial.println("closing connection");
     client.stop();
